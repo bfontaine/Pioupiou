@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F40D11A01A0BB24400970638 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D119F1A0BB24400970638 /* AppDelegate.m */; };
+		F40D11A21A0BB24400970638 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11A11A0BB24400970638 /* main.m */; };
+		F40D11A51A0BB24400970638 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11A41A0BB24400970638 /* GameScene.m */; };
+		F40D11A71A0BB24400970638 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F40D11A61A0BB24400970638 /* GameScene.sks */; };
+		F40D11A91A0BB24400970638 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40D11A81A0BB24400970638 /* Images.xcassets */; };
+		F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40D11AA1A0BB24400970638 /* MainMenu.xib */; };
+		F40D11B81A0BB24400970638 /* PioupiouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11B71A0BB24400970638 /* PioupiouTests.m */; };
+		F40D11C31A0BB91000970638 /* PPShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11C21A0BB91000970638 /* PPShip.m */; };
+		F49B70551A14C0DF0076C6FB /* PPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70541A14C0DF0076C6FB /* PPPlayer.m */; };
+		F49B70581A14C0FB0076C6FB /* PPEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70571A14C0FB0076C6FB /* PPEnemy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F40D11B21A0BB24400970638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F40D11911A0BB24400970638 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F40D11981A0BB24400970638;
+			remoteInfo = Pioupiou;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F40D11991A0BB24400970638 /* Pioupiou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pioupiou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40D119D1A0BB24400970638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40D119E1A0BB24400970638 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F40D119F1A0BB24400970638 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F40D11A11A0BB24400970638 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F40D11A31A0BB24400970638 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F40D11A41A0BB24400970638 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		F40D11A61A0BB24400970638 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F40D11A81A0BB24400970638 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F40D11AB1A0BB24400970638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F40D11B11A0BB24400970638 /* PioupiouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioupiouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40D11B61A0BB24400970638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40D11B71A0BB24400970638 /* PioupiouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PioupiouTests.m; sourceTree = "<group>"; };
+		F40D11C11A0BB91000970638 /* PPShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPShip.h; sourceTree = "<group>"; };
+		F40D11C21A0BB91000970638 /* PPShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPShip.m; sourceTree = "<group>"; };
+		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
+		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
+		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
+		F49B70571A14C0FB0076C6FB /* PPEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPEnemy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F40D11961A0BB24400970638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40D11AE1A0BB24400970638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F40D11901A0BB24400970638 = {
+			isa = PBXGroup;
+			children = (
+				F40D119B1A0BB24400970638 /* Pioupiou */,
+				F40D11B41A0BB24400970638 /* PioupiouTests */,
+				F40D119A1A0BB24400970638 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F40D119A1A0BB24400970638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F40D11991A0BB24400970638 /* Pioupiou.app */,
+				F40D11B11A0BB24400970638 /* PioupiouTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F40D119B1A0BB24400970638 /* Pioupiou */ = {
+			isa = PBXGroup;
+			children = (
+				F40D119E1A0BB24400970638 /* AppDelegate.h */,
+				F40D119F1A0BB24400970638 /* AppDelegate.m */,
+				F40D11C11A0BB91000970638 /* PPShip.h */,
+				F40D11C21A0BB91000970638 /* PPShip.m */,
+				F49B70531A14C0DF0076C6FB /* PPPlayer.h */,
+				F49B70561A14C0FB0076C6FB /* PPEnemy.h */,
+				F49B70571A14C0FB0076C6FB /* PPEnemy.m */,
+				F49B70541A14C0DF0076C6FB /* PPPlayer.m */,
+				F40D11A31A0BB24400970638 /* GameScene.h */,
+				F40D11A41A0BB24400970638 /* GameScene.m */,
+				F40D11A61A0BB24400970638 /* GameScene.sks */,
+				F40D11A81A0BB24400970638 /* Images.xcassets */,
+				F40D11AA1A0BB24400970638 /* MainMenu.xib */,
+				F40D119C1A0BB24400970638 /* Supporting Files */,
+			);
+			path = Pioupiou;
+			sourceTree = "<group>";
+		};
+		F40D119C1A0BB24400970638 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F40D119D1A0BB24400970638 /* Info.plist */,
+				F40D11A11A0BB24400970638 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F40D11B41A0BB24400970638 /* PioupiouTests */ = {
+			isa = PBXGroup;
+			children = (
+				F40D11B71A0BB24400970638 /* PioupiouTests.m */,
+				F40D11B51A0BB24400970638 /* Supporting Files */,
+			);
+			path = PioupiouTests;
+			sourceTree = "<group>";
+		};
+		F40D11B51A0BB24400970638 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F40D11B61A0BB24400970638 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F40D11981A0BB24400970638 /* Pioupiou */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40D11BB1A0BB24400970638 /* Build configuration list for PBXNativeTarget "Pioupiou" */;
+			buildPhases = (
+				F40D11951A0BB24400970638 /* Sources */,
+				F40D11961A0BB24400970638 /* Frameworks */,
+				F40D11971A0BB24400970638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pioupiou;
+			productName = Pioupiou;
+			productReference = F40D11991A0BB24400970638 /* Pioupiou.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F40D11B01A0BB24400970638 /* PioupiouTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40D11BE1A0BB24400970638 /* Build configuration list for PBXNativeTarget "PioupiouTests" */;
+			buildPhases = (
+				F40D11AD1A0BB24400970638 /* Sources */,
+				F40D11AE1A0BB24400970638 /* Frameworks */,
+				F40D11AF1A0BB24400970638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F40D11B31A0BB24400970638 /* PBXTargetDependency */,
+			);
+			name = PioupiouTests;
+			productName = PioupiouTests;
+			productReference = F40D11B11A0BB24400970638 /* PioupiouTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F40D11911A0BB24400970638 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Baptiste Fontaine";
+				TargetAttributes = {
+					F40D11981A0BB24400970638 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F40D11B01A0BB24400970638 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F40D11981A0BB24400970638;
+					};
+				};
+			};
+			buildConfigurationList = F40D11941A0BB24400970638 /* Build configuration list for PBXProject "Pioupiou" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F40D11901A0BB24400970638;
+			productRefGroup = F40D119A1A0BB24400970638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F40D11981A0BB24400970638 /* Pioupiou */,
+				F40D11B01A0BB24400970638 /* PioupiouTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F40D11971A0BB24400970638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40D11A71A0BB24400970638 /* GameScene.sks in Resources */,
+				F40D11A91A0BB24400970638 /* Images.xcassets in Resources */,
+				F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40D11AF1A0BB24400970638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F40D11951A0BB24400970638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40D11A21A0BB24400970638 /* main.m in Sources */,
+				F40D11A51A0BB24400970638 /* GameScene.m in Sources */,
+				F40D11A01A0BB24400970638 /* AppDelegate.m in Sources */,
+				F40D11C31A0BB91000970638 /* PPShip.m in Sources */,
+				F49B70581A14C0FB0076C6FB /* PPEnemy.m in Sources */,
+				F49B70551A14C0DF0076C6FB /* PPPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40D11AD1A0BB24400970638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40D11B81A0BB24400970638 /* PioupiouTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F40D11B31A0BB24400970638 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F40D11981A0BB24400970638 /* Pioupiou */;
+			targetProxy = F40D11B21A0BB24400970638 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F40D11AA1A0BB24400970638 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F40D11AB1A0BB24400970638 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F40D11B91A0BB24400970638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F40D11BA1A0BB24400970638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F40D11BC1A0BB24400970638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pioupiou/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F40D11BD1A0BB24400970638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pioupiou/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F40D11BF1A0BB24400970638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PioupiouTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioupiou.app/Contents/MacOS/Pioupiou";
+			};
+			name = Debug;
+		};
+		F40D11C01A0BB24400970638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PioupiouTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioupiou.app/Contents/MacOS/Pioupiou";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F40D11941A0BB24400970638 /* Build configuration list for PBXProject "Pioupiou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40D11B91A0BB24400970638 /* Debug */,
+				F40D11BA1A0BB24400970638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40D11BB1A0BB24400970638 /* Build configuration list for PBXNativeTarget "Pioupiou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40D11BC1A0BB24400970638 /* Debug */,
+				F40D11BD1A0BB24400970638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40D11BE1A0BB24400970638 /* Build configuration list for PBXNativeTarget "PioupiouTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40D11BF1A0BB24400970638 /* Debug */,
+				F40D11C01A0BB24400970638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F40D11911A0BB24400970638 /* Project object */;
+}

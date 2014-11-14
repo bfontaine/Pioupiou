@@ -1,0 +1,42 @@
+//
+//  PPEnemy.m
+//  Pioupiou
+//
+//  Created by Baptiste Fontaine on 13/11/2014.
+//  Copyright (c) 2014 Baptiste Fontaine. All rights reserved.
+//
+
+#import "PPEnemy.h"
+
+@implementation PPEnemy
+
+-(id)init
+{
+    self = [super initWithImageNamed:@"EnemyShip"
+                withRocketImageNamed:@"EnemyRocket"];
+
+    if (self != nil) {
+        self.shipNode.physicsBody.contactTestBitMask = PP_ENEMY_SHIP_BIT_MASK;
+        self.rocketNode.physicsBody.contactTestBitMask = PP_ENEMY_ROCKET_BIT_MASK;
+        self.rocketDirection = -1;
+    }
+
+    return self;
+}
+
+-(CGPoint)getInitialRocketPosition
+{
+    return CGPointMake(self.x - self.width/2, self.y);
+}
+
+-(CGPoint)getInitialShipPositionWithSceneWidth:(int)width withSceneHeight:(int)height
+{
+    return CGPointMake(width/4*3, height/2);
+}
+
+-(void)update
+{
+
+}
+
+@end
