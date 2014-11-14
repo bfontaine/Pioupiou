@@ -12,8 +12,6 @@
 
 @interface GameScene ()
 
-@property SKSpriteNode * playground;
-
 @property PPPlayer * playerShip;
 @property PPEnemy * enemyShip;
 
@@ -32,16 +30,13 @@
     CGFloat width = self.size.width,
            height = self.size.height;
 
-    // background image / limit
+    // background image
     SKTexture * bg = [SKTexture textureWithImage:[NSImage imageNamed:@"GameBackground"]];
-    self.playground = [SKSpriteNode spriteNodeWithTexture:bg size:self.size];
-    self.playground.position = CGPointMake(width/2, height/2);
-    [self.playground setSize:self.size];
+    SKSpriteNode * playground = [SKSpriteNode spriteNodeWithTexture:bg size:self.size];
+    playground.position = CGPointMake(width/2, height/2);
+    [playground setSize:self.size];
 
-    self.playground.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0, 0, width, height)];
-    self.playground.physicsBody.affectedByGravity = NO;
-
-    [self addChild:self.playground];
+    [self addChild:playground];
 
     // ships
     self.playerShip = [[PPPlayer alloc] init];
@@ -51,6 +46,10 @@
     [self.enemyShip setPositionWithSceneWidth:width withHeight:height];
 
     self.physicsWorld.contactDelegate = self;
+
+    // limits
+    self.scaleMode = SKSceneScaleModeAspectFill;
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
     [self addChild:self.playerShip.shipNode];
     [self addChild:self.enemyShip.shipNode];
