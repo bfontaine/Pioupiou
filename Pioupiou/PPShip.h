@@ -37,6 +37,9 @@ enum PP_Move {
 @property (readonly, getter=getX) CGFloat x;
 @property (readonly, getter=getY) CGFloat y;
 
+@property CGFloat nextDirectionX;
+@property CGFloat nextDirectionY;
+
 @property (readonly) NSInteger height;
 @property (readonly) NSInteger width;
 
@@ -61,8 +64,12 @@ enum PP_Move {
 
 -(void)move;
 
+-(void)startFiring;
+-(void)stopFiring;
+
 -(SKSpriteNode *)fireRocket;
 -(void)receiveRocket;
+-(BOOL)isDestroyed;
 
 -(CGPoint)getInitialRocketPosition;
 -(CGPoint)getInitialShipPositionWithSceneWidth:(int)width withSceneHeight:(int)height;

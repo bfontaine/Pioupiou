@@ -26,7 +26,8 @@
 
 -(CGPoint)getInitialRocketPosition
 {
-    return CGPointMake(self.x - self.width/2, self.y);
+    return CGPointMake(self.x - self.width/2 - self.rocketNode.size.width/2,
+                       self.y);
 }
 
 -(CGPoint)getInitialShipPositionWithSceneWidth:(int)width withSceneHeight:(int)height
@@ -34,9 +35,36 @@
     return CGPointMake(width/4*3, height/2);
 }
 
+-(BOOL)isMovingUp { return self.nextDirectionY > 0; }
+-(BOOL)isMovingDown { return self.nextDirectionY < 0; }
+
 -(void)update
 {
+    int rand = arc4random_uniform(100);
 
+    // start/stop firing
+
+    if (self.isFiring) {
+        if (rand < 85) {
+            [self stopFiring];
+        }
+    } else if (rand < 5) {
+        [self startFiring];
+    }
+
+    // move
+
+    if ([self isMovingDown] || [self isMovingUp]) {
+        if (rand < 15) {
+            [self resetVerticalMovement];
+        }
+    } else {
+        if (rand < 50) {
+            [self prepareToMoveUp];
+        } else {
+            [self prepareToMoveDown];
+        }
+    }
 }
 
 @end

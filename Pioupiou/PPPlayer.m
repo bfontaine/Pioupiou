@@ -26,7 +26,7 @@
 
 -(CGPoint)getInitialRocketPosition
 {
-    return CGPointMake(self.x + self.width/2, self.y);
+    return CGPointMake(self.x + self.width/2 + self.rocketNode.size.width/2, self.y);
 }
 
 -(CGPoint)getInitialShipPositionWithSceneWidth:(int)width withSceneHeight:(int)height

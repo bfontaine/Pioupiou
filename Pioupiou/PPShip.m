@@ -16,9 +16,6 @@
 @property NSInteger height;
 @property NSInteger width;
 
-@property CGFloat nextDirectionX;
-@property CGFloat nextDirectionY;
-
 @property CGFloat lastRocketFireTimestamp;
 
 @end
@@ -110,6 +107,16 @@
     [self updateLocationByX: self.nextDirectionX byY: self.nextDirectionY];
 }
 
+-(void)startFiring
+{
+    self.isFiring = YES;
+}
+
+-(void)stopFiring
+{
+    self.isFiring = NO;
+}
+
 -(void)prepareToMove:(enum PP_Move)direction
 {
     switch (direction) {
@@ -150,8 +157,7 @@
 
     SKSpriteNode * rocket = [self.rocketNode copy];
 
-    rocket.position = CGPointMake(self.x + self.width/2 + rocket.size.width/2,
-                                  self.y);
+    rocket.position = [self getInitialRocketPosition];
 
     [rocket runAction: [SKAction moveByX:PP_ROCKET_OFFSET*self.rocketDirection
                                        y:0
@@ -162,18 +168,29 @@
 
 -(void)updateHealth:(int)health
 {
+
+    if ([self isDestroyed]) {
+        return;
+    }
+
     self.health += health;
 
-    // TODO check when lives <= 0
     if (self.health <= 0) {
-        self.lives -= 1;
-        self.health = PP_MAX_HEALTH;
+        self.lives--;
+        if (self.lives > 0) {
+            self.health = PP_MAX_HEALTH;
+        }
     }
 }
 
 -(void)receiveRocket
 {
     [self updateHealth: -10];
+}
+
+-(BOOL)isDestroyed
+{
+    return self.lives <= 0;
 }
 
 // override these in children classes

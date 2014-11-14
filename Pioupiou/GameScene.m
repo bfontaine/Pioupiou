@@ -64,6 +64,9 @@
 
 -(NSString *)repeatSymbol:(NSString *)symbol times:(NSInteger)times
 {
+    if (times <= 0) {
+        return @"";
+    }
     return [@"" stringByPaddingToLength:(times * [symbol length])
                              withString:symbol
                         startingAtIndex:0];
@@ -85,25 +88,6 @@
     self.enemyHealthLabel.text = [self healthAsText:self.enemyShip];
     self.playerLivesLabel.text = [self livesAsText:self.playerShip];
     self.enemyLivesLabel.text = [self livesAsText:self.enemyShip];
-}
-
--(void)prepareToFirePlayerRocket
-{
-    self.playerShip.isFiring = YES;
-}
-
--(void)prepareToFireEnemyRocket
-{
-    self.playerShip.isFiring = YES;
-}
-
--(void)stopFiringPlayerRockets
-{
-    self.playerShip.isFiring = NO;
-}
--(void)stopFiringEnemyRockets
-{
-    self.enemyShip.isFiring = NO;
 }
 
 -(void)handleKeyEvent:(NSEvent *)theEvent withKeyDown:(BOOL)keyDown {
@@ -145,9 +129,9 @@
             break;
         case ' ':
             if (keyDown) {
-                [self prepareToFirePlayerRocket];
+                [self.playerShip startFiring];
             } else {
-                [self stopFiringPlayerRockets];
+                [self.playerShip stopFiring];
             }
             break;
     }
