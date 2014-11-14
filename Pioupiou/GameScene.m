@@ -66,10 +66,22 @@
     self.enemyLivesLabel =   [self addLabelNodeWithX:rightX withY:secondLineY];
 }
 
+-(void)endOfGame
+{
+    NSString * msg = [self.playerShip isDestroyed] ? @"You lost!" : @"You won!";
+    NSAlert *alert = [[NSAlert alloc] init];
+
+    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert setMessageText:@"End of Game"];
+    [alert setMessageText:msg];
+    [alert runModal];
+    exit(0);
+}
+
 -(SKLabelNode *)addLabelNodeWithX:(CGFloat)x withY:(CGFloat)y
 {
     SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"helvetica"];
-    [label setFontColor: [NSColor blackColor]];
+    [label setFontColor: [NSColor whiteColor]];
     [label setFontSize:SCORES_FONT_SIZE];
     [label setPosition:CGPointMake(x, y)];
     [self addChild:label];
@@ -159,6 +171,8 @@
     [self handleKeyEvent:theEvent withKeyDown:false];
 }
 
+/* App lifecycle management */
+
 - (void)update:(NSTimeInterval)currentTime
 {
     // moves
@@ -194,6 +208,11 @@
 {
     // labels
     [self updateHealthAndLivesLabels];
+
+    if ([self.playerShip isDestroyed] || [self.enemyShip isDestroyed])
+    {
+        [self endOfGame];
+    }
 
     // move the enemy
     [self.enemyShip update];

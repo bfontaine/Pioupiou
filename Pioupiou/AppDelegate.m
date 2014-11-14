@@ -46,7 +46,7 @@
     self.skView.ignoresSiblingOrder = YES;
     
     //self.skView.showsFPS = YES;
-    //self.skView.showsNodeCount = YES;
+    self.skView.showsNodeCount = YES;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
