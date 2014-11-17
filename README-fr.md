@@ -11,3 +11,4 @@ et tirez avec la barre d’espace. Vous pouvez vous déplacer à droite mais c�
 * déplacements fluides (on peut se déplacer en diagonale, tirer en bougeant, etc)
 * l’app est internationalisée (anglais et français, possible d’ajouter d’autres
   langues)
+* fichier de scores
