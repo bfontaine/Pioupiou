@@ -15,6 +15,7 @@
 		F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40D11AA1A0BB24400970638 /* MainMenu.xib */; };
 		F40D11B81A0BB24400970638 /* PioupiouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11B71A0BB24400970638 /* PioupiouTests.m */; };
 		F40D11C31A0BB91000970638 /* PPShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11C21A0BB91000970638 /* PPShip.m */; };
+		F441E0E01A1A366300EF1ECC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F441E0E21A1A366300EF1ECC /* Localizable.strings */; };
 		F49B70551A14C0DF0076C6FB /* PPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70541A14C0DF0076C6FB /* PPPlayer.m */; };
 		F49B70581A14C0FB0076C6FB /* PPEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70571A14C0FB0076C6FB /* PPEnemy.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,10 @@
 		F40D11C11A0BB91000970638 /* PPShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPShip.h; sourceTree = "<group>"; };
 		F40D11C21A0BB91000970638 /* PPShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPShip.m; sourceTree = "<group>"; };
 		F441E0D61A1A26D900EF1ECC /* Masks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masks.h; sourceTree = "<group>"; };
+		F441E0DD1A1A363400EF1ECC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		F441E0E11A1A366300EF1ECC /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F441E0E31A1A366400EF1ECC /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F441E0E51A1A375A00EF1ECC /* README-fr.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "README-fr.md"; path = "../README-fr.md"; sourceTree = "<group>"; };
 		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
 		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
 		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
@@ -91,6 +96,8 @@
 		F40D119B1A0BB24400970638 /* Pioupiou */ = {
 			isa = PBXGroup;
 			children = (
+				F441E0E51A1A375A00EF1ECC /* README-fr.md */,
+				F441E0E21A1A366300EF1ECC /* Localizable.strings */,
 				F40D119E1A0BB24400970638 /* AppDelegate.h */,
 				F40D119F1A0BB24400970638 /* AppDelegate.m */,
 				F40D11C11A0BB91000970638 /* PPShip.h */,
@@ -199,6 +206,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = F40D11901A0BB24400970638;
 			productRefGroup = F40D119A1A0BB24400970638 /* Products */;
@@ -217,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40D11A71A0BB24400970638 /* GameScene.sks in Resources */,
+				F441E0E01A1A366300EF1ECC /* Localizable.strings in Resources */,
 				F40D11A91A0BB24400970638 /* Images.xcassets in Resources */,
 				F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */,
 			);
@@ -268,8 +277,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				F40D11AB1A0BB24400970638 /* Base */,
+				F441E0DD1A1A363400EF1ECC /* fr */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F441E0E21A1A366300EF1ECC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F441E0E11A1A366300EF1ECC /* en */,
+				F441E0E31A1A366400EF1ECC /* fr */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

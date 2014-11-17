@@ -71,11 +71,11 @@
 
 -(void)endOfGame
 {
-    NSString * msg = [self.playerShip isDestroyed] ? @"You lost!" : @"You won!";
+    NSString * msg = [self.playerShip isDestroyed] ? NSLocalizedString(@"You lost!", nil) : NSLocalizedString(@"You won!", nil);
     NSAlert *alert = [[NSAlert alloc] init];
 
     [alert setAlertStyle:NSInformationalAlertStyle];
-    [alert setMessageText:@"End of Game"];
+    [alert setMessageText:NSLocalizedString(@"End of Game", nil)];
     [alert setMessageText:msg];
     [alert runModal];
     exit(0);
