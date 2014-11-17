@@ -22,7 +22,7 @@
     [arch setClass:self forClassName:@"SKScene"];
     SKScene *scene = [arch decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     [arch finishDecoding];
-        
+
     return scene;
 }
 
@@ -46,7 +46,7 @@
     self.skView.ignoresSiblingOrder = YES;
     
     //self.skView.showsFPS = YES;
-    self.skView.showsNodeCount = YES;
+    //self.skView.showsNodeCount = YES;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

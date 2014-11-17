@@ -29,6 +29,8 @@
  */
 #define PP_LIVES_COUNT 2
 
+#define PP_ROCKET_HEALTH_DAMAGE -5
+
 /**
  *  Unit increment for movements
  */

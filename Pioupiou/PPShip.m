@@ -160,7 +160,7 @@
 
 -(void)receiveRocket
 {
-    [self updateHealth: -10];
+    [self updateHealth: PP_ROCKET_HEALTH_DAMAGE];
 }
 
 -(BOOL)isDestroyed
