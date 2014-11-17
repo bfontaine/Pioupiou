@@ -28,7 +28,8 @@
 
 @implementation GameScene
 
--(void)didMoveToView:(SKView *)view {
+-(void)didMoveToView:(SKView *)view
+{
 
     CGFloat width = self.size.width,
            height = self.size.height;
@@ -52,7 +53,8 @@
     // limits
     self.scaleMode = SKSceneScaleModeAspectFill;
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-    self.physicsBody.collisionBitMask = PP_EDGE_BIT_MASK;
+    self.physicsBody.categoryBitMask = PP_EDGE_BIT_MASK;
+    self.physicsBody.collisionBitMask = PP_THROUGH_EDGE_BIT_MASK;
 
     [self addChild:self.playerShip.shipNode];
     [self addChild:self.enemyShip.shipNode];
@@ -71,7 +73,9 @@
 
 -(void)endOfGame
 {
-    NSString * msg = [self.playerShip isDestroyed] ? NSLocalizedString(@"You lost!", nil) : NSLocalizedString(@"You won!", nil);
+    NSString * msg = [self.playerShip isDestroyed]
+                        ? NSLocalizedString(@"You lost!", nil)
+                        : NSLocalizedString(@"You won!", nil);
     NSAlert *alert = [[NSAlert alloc] init];
 
     [alert setAlertStyle:NSInformationalAlertStyle];
@@ -119,7 +123,8 @@
     self.enemyLivesLabel.text = [self livesAsText:self.enemyShip];
 }
 
--(void)handleKeyEvent:(NSEvent *)theEvent withKeyDown:(BOOL)keyDown {
+-(void)handleKeyEvent:(NSEvent *)theEvent withKeyDown:(BOOL)keyDown
+{
     NSString * keys = [theEvent charactersIgnoringModifiers];
     NSUInteger length = [keys length];
 
@@ -166,11 +171,13 @@
     }
 }
 
--(void)keyDown:(NSEvent *)theEvent {
+-(void)keyDown:(NSEvent *)theEvent
+{
     [self handleKeyEvent:theEvent withKeyDown:true];
 }
 
--(void)keyUp:(NSEvent *)theEvent {
+-(void)keyUp:(NSEvent *)theEvent
+{
     [self handleKeyEvent:theEvent withKeyDown:false];
 }
 
@@ -219,11 +226,13 @@
 }
 
 
-- (void)didBeginContact:(SKPhysicsContact *)contact {
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
     int bitA = contact.bodyA.categoryBitMask;
     int bitB = contact.bodyB.categoryBitMask;
 
     if (bitA == bitB) { return; }
+
 
     // remove rockets
 
@@ -234,6 +243,10 @@
     if (bitB & (PP_PLAYER_ROCKET_BIT_MASK|PP_ENEMY_ROCKET_BIT_MASK)) {
         [contact.bodyB.node removeFromParent];
     }
+
+    // don't do anything when we touch the edges
+
+    if (bitA == PP_EDGE_BIT_MASK || bitB == PP_EDGE_BIT_MASK) { return; }
 
     // destroy ships
 

@@ -7,6 +7,7 @@
 //
 
 #import "PPShip.h"
+#import "Masks.h"
 
 @interface PPShip ()
 
@@ -22,7 +23,8 @@
 
 @implementation PPShip
 
--(void)updateLocationByX:(CGFloat)x byY:(CGFloat)y {
+-(void)updateLocationByX:(CGFloat)x byY:(CGFloat)y
+{
     CGPoint pos = self.shipNode.position;
     self.shipNode.position = CGPointMake(pos.x + x, pos.y + y);
 }
@@ -45,8 +47,10 @@
         self.shipNode.physicsBody.affectedByGravity = NO;
         self.rocketNode.physicsBody.affectedByGravity = NO;
 
-        self.rocketNode.physicsBody.allowsRotation = NO;
         self.shipNode.physicsBody.allowsRotation = NO;
+        self.rocketNode.physicsBody.allowsRotation = NO;
+
+        self.rocketNode.physicsBody.collisionBitMask = PP_THROUGH_EDGE_BIT_MASK;
 
         self.width = self.shipNode.size.width;
         self.height = self.shipNode.size.height;
@@ -68,30 +72,11 @@
                                                         withSceneHeight:height];
 }
 
--(void)resetHorizontalMovement
-{
-    self.nextDirectionX = 0;
-}
+-(void)resetHorizontalMovement { self.nextDirectionX = 0; }
+-(void)resetVerticalMovement   { self.nextDirectionY = 0; }
 
--(void)resetVerticalMovement
-{
-    self.nextDirectionY = 0;
-}
-
--(CGPoint)position
-{
-    return self.shipNode.position;
-}
-
--(CGFloat)getX
-{
-    return [self position].x;
-}
-
--(CGFloat)getY
-{
-    return [self position].y;
-}
+-(CGFloat)getX { return self.shipNode.position.x; }
+-(CGFloat)getY { return self.shipNode.position.y; }
 
 -(void)initNextDirection
 {
@@ -104,15 +89,8 @@
     [self updateLocationByX: self.nextDirectionX byY: self.nextDirectionY];
 }
 
--(void)startFiring
-{
-    self.isFiring = YES;
-}
-
--(void)stopFiring
-{
-    self.isFiring = NO;
-}
+-(void)startFiring { self.isFiring = YES; }
+-(void)stopFiring  { self.isFiring = NO;  }
 
 -(void)prepareToMove:(enum PP_Move)direction
 {
@@ -132,9 +110,9 @@
     }
 }
 
--(void)prepareToMoveUp   { [self prepareToMove:PP_MOVE_UP]; }
--(void)prepareToMoveDown { [self prepareToMove:PP_MOVE_DOWN]; }
--(void)prepareToMoveLeft { [self prepareToMove:PP_MOVE_LEFT]; }
+-(void)prepareToMoveUp    { [self prepareToMove:PP_MOVE_UP]; }
+-(void)prepareToMoveDown  { [self prepareToMove:PP_MOVE_DOWN]; }
+-(void)prepareToMoveLeft  { [self prepareToMove:PP_MOVE_LEFT]; }
 -(void)prepareToMoveRight { [self prepareToMove:PP_MOVE_RIGHT]; }
 
 // should be dynamic

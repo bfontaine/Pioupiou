@@ -23,8 +23,6 @@
         self.shipNode.physicsBody.contactTestBitMask = PP_PLAYER_ROCKET_BIT_MASK;
         self.rocketNode.physicsBody.contactTestBitMask = PP_PLAYER_SHIP_BIT_MASK;
 
-        self.rocketNode.physicsBody.collisionBitMask = PP_EDGE_BIT_MASK;
-
         self.rocketDirection = -1;
     }
 

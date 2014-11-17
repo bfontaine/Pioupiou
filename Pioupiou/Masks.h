@@ -16,7 +16,10 @@ enum PP_Mask {
     PP_ENEMY_SHIP_BIT_MASK    = 0x1 << 2,
     PP_ENEMY_ROCKET_BIT_MASK  = 0x1 << 3,
 
-    PP_EDGE_BIT_MASK   = 0x1 << 4,
+    PP_EDGE_BIT_MASK          = 0x1 << 4,
+
+    // anyone with this as a collisionBitMask will pass through the edges
+    PP_THROUGH_EDGE_BIT_MASK  = 0x1 << 5,
 };
 
 #endif
