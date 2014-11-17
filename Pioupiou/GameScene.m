@@ -67,6 +67,8 @@
     self.playerLivesLabel =  [self addLabelNodeWithX:leftX  withY:secondLineY];
     self.enemyHealthLabel =  [self addLabelNodeWithX:rightX withY:firstLineY];
     self.enemyLivesLabel =   [self addLabelNodeWithX:rightX withY:secondLineY];
+
+    [self updateHealthAndLivesLabels];
 }
 
 -(void)endOfGame
@@ -208,9 +210,6 @@
 
 -(void)didFinishUpdate
 {
-    // labels
-    [self updateHealthAndLivesLabels];
-
     if ([self.playerShip isDestroyed] || [self.enemyShip isDestroyed])
     {
         [self endOfGame];
@@ -252,6 +251,9 @@
     if (bitA == PP_PLAYER_SHIP_BIT_MASK || bitB == PP_PLAYER_SHIP_BIT_MASK) {
         [self.playerShip receiveRocket];
     }
+
+    // labels
+    [self updateHealthAndLivesLabels];
 }
 
 @end
