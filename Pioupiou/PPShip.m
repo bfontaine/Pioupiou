@@ -143,18 +143,15 @@
 
 -(void)updateHealth:(int)health
 {
-
     if ([self isDestroyed]) {
         return;
     }
 
     self.health += health;
 
-    if (self.health <= 0) {
+    if (self.health <= 0 && self.lives > 0) {
         self.lives--;
-        if (self.lives > 0) {
-            self.health = PP_MAX_HEALTH;
-        }
+        self.health = PP_MAX_HEALTH;
     }
 }
 
@@ -165,7 +162,7 @@
 
 -(BOOL)isDestroyed
 {
-    return self.lives <= 0;
+    return self.lives == 0 && self.health == 0;
 }
 
 // override these in children classes

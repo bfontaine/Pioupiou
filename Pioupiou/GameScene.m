@@ -11,8 +11,6 @@
 
 #define SCORES_FONT_SIZE 80
 
-#define SCENE_EDGE_BIT_MASK 0x1 << 3
-
 @interface GameScene ()
 
 @property PPPlayer * playerShip;
@@ -132,41 +130,38 @@
 
     unichar keyChar = [keys characterAtIndex:0];
 
+    if (!keyDown) {
+        switch (keyChar) {
+            case NSUpArrowFunctionKey:
+            case NSDownArrowFunctionKey:
+                [self.playerShip resetVerticalMovement];
+                break;
+            case NSLeftArrowFunctionKey:
+            case NSRightArrowFunctionKey:
+                [self.playerShip resetHorizontalMovement];
+                break;
+            case ' ':
+                [self.playerShip stopFiring];
+                break;
+        }
+        return;
+    }
+
     switch (keyChar) {
         case NSUpArrowFunctionKey:
-            if (keyDown) {
-                [self.playerShip prepareToMoveUp];
-            } else {
-                [self.playerShip resetVerticalMovement];
-            }
+            [self.playerShip prepareToMoveUp];
             break;
         case NSDownArrowFunctionKey:
-            if (keyDown) {
-                [self.playerShip prepareToMoveDown];
-            } else {
-                [self.playerShip resetVerticalMovement];
-            }
+            [self.playerShip prepareToMoveDown];
             break;
         case NSLeftArrowFunctionKey:
-            if (keyDown) {
-                [self.playerShip prepareToMoveLeft];
-            } else {
-                [self.playerShip resetHorizontalMovement];
-            }
+            [self.playerShip prepareToMoveLeft];
             break;
         case NSRightArrowFunctionKey:
-            if (keyDown) {
-                [self.playerShip prepareToMoveRight];
-            } else {
-                [self.playerShip resetHorizontalMovement];
-            }
+            [self.playerShip prepareToMoveRight];
             break;
         case ' ':
-            if (keyDown) {
-                [self.playerShip startFiring];
-            } else {
-                [self.playerShip stopFiring];
-            }
+            [self.playerShip startFiring];
             break;
     }
 }
