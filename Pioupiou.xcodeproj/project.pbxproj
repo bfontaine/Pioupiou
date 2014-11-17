@@ -19,16 +19,6 @@
 		F49B70581A14C0FB0076C6FB /* PPEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70571A14C0FB0076C6FB /* PPEnemy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F40D11B21A0BB24400970638 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F40D11911A0BB24400970638 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F40D11981A0BB24400970638;
-			remoteInfo = Pioupiou;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		F40D11991A0BB24400970638 /* Pioupiou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pioupiou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40D119D1A0BB24400970638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,7 +30,6 @@
 		F40D11A61A0BB24400970638 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F40D11A81A0BB24400970638 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F40D11AB1A0BB24400970638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		F40D11B11A0BB24400970638 /* PioupiouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioupiouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40D11C11A0BB91000970638 /* PPShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPShip.h; sourceTree = "<group>"; };
 		F40D11C21A0BB91000970638 /* PPShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPShip.m; sourceTree = "<group>"; };
 		F441E0D61A1A26D900EF1ECC /* Masks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masks.h; sourceTree = "<group>"; };
@@ -49,6 +38,7 @@
 		F441E0E31A1A366400EF1ECC /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F441E0E51A1A375A00EF1ECC /* README-fr.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "README-fr.md"; path = "../README-fr.md"; sourceTree = "<group>"; };
 		F441E0E61A1A4A2000EF1ECC /* Pioupiou.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pioupiou.entitlements; sourceTree = "<group>"; };
+		F441E0E71A1A4C5600EF1ECC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
 		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
 		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
@@ -57,13 +47,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		F40D11961A0BB24400970638 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F40D11AE1A0BB24400970638 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				F40D11991A0BB24400970638 /* Pioupiou.app */,
-				F40D11B11A0BB24400970638 /* PioupiouTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +79,7 @@
 				F441E0E51A1A375A00EF1ECC /* README-fr.md */,
 				F441E0E21A1A366300EF1ECC /* Localizable.strings */,
 				F40D119E1A0BB24400970638 /* AppDelegate.h */,
+				F441E0E71A1A4C5600EF1ECC /* README.md */,
 				F40D119F1A0BB24400970638 /* AppDelegate.m */,
 				F40D11C11A0BB91000970638 /* PPShip.h */,
 				F40D11C21A0BB91000970638 /* PPShip.m */,
@@ -144,24 +127,6 @@
 			productReference = F40D11991A0BB24400970638 /* Pioupiou.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F40D11B01A0BB24400970638 /* PioupiouTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F40D11BE1A0BB24400970638 /* Build configuration list for PBXNativeTarget "PioupiouTests" */;
-			buildPhases = (
-				F40D11AD1A0BB24400970638 /* Sources */,
-				F40D11AE1A0BB24400970638 /* Frameworks */,
-				F40D11AF1A0BB24400970638 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F40D11B31A0BB24400970638 /* PBXTargetDependency */,
-			);
-			name = PioupiouTests;
-			productName = PioupiouTests;
-			productReference = F40D11B11A0BB24400970638 /* PioupiouTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,10 +143,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					F40D11B01A0BB24400970638 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = F40D11981A0BB24400970638;
 					};
 				};
 			};
@@ -200,7 +161,6 @@
 			projectRoot = "";
 			targets = (
 				F40D11981A0BB24400970638 /* Pioupiou */,
-				F40D11B01A0BB24400970638 /* PioupiouTests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,13 +174,6 @@
 				F441E0E01A1A366300EF1ECC /* Localizable.strings in Resources */,
 				F40D11A91A0BB24400970638 /* Images.xcassets in Resources */,
 				F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F40D11AF1A0BB24400970638 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,22 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F40D11AD1A0BB24400970638 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F40D11B31A0BB24400970638 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F40D11981A0BB24400970638 /* Pioupiou */;
-			targetProxy = F40D11B21A0BB24400970638 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F40D11AA1A0BB24400970638 /* MainMenu.xib */ = {
@@ -382,42 +320,6 @@
 			};
 			name = Release;
 		};
-		F40D11BF1A0BB24400970638 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PioupiouTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioupiou.app/Contents/MacOS/Pioupiou";
-			};
-			name = Debug;
-		};
-		F40D11C01A0BB24400970638 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PioupiouTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioupiou.app/Contents/MacOS/Pioupiou";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,15 +337,6 @@
 			buildConfigurations = (
 				F40D11BC1A0BB24400970638 /* Debug */,
 				F40D11BD1A0BB24400970638 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F40D11BE1A0BB24400970638 /* Build configuration list for PBXNativeTarget "PioupiouTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F40D11BF1A0BB24400970638 /* Debug */,
-				F40D11C01A0BB24400970638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
