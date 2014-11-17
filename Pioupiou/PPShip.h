@@ -105,6 +105,11 @@ enum PP_Move {
 @property NSInteger lives;
 
 /**
+ *  The current score of this ship.
+ **/
+@property (readonly, getter=getScore) NSInteger score;
+
+/**
  *  Initialize a new ship with an image for the ship itself and for its rockets.
  *
  *  @param imgName ship image

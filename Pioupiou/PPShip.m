@@ -141,6 +141,11 @@
     return rocket;
 }
 
+-(NSInteger)getScore
+{
+    return self.lives * PP_MAX_HEALTH + self.health;
+}
+
 -(void)updateHealth:(int)health
 {
     if ([self isDestroyed]) {

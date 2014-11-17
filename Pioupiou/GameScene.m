@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "GameSupport.h"
 #import "Masks.h"
 
 #define SCORES_FONT_SIZE 80
@@ -71,18 +72,42 @@
     [self updateHealthAndLivesLabels];
 }
 
--(void)endOfGame
+-(void)showInfoAlertWithTitle:(NSString*)title withText:(NSString*)text
 {
-    NSString * msg = [self.playerShip isDestroyed]
-                        ? NSLocalizedString(@"You lost!", nil)
-                        : NSLocalizedString(@"You won!", nil);
     NSAlert *alert = [[NSAlert alloc] init];
 
     [alert setAlertStyle:NSInformationalAlertStyle];
-    [alert setMessageText:NSLocalizedString(@"End of Game", nil)];
-    [alert setMessageText:msg];
+    [alert setMessageText:title];
+    [alert setMessageText:text];
     [alert runModal];
-    exit(0);
+}
+
+-(void)endOfGame
+{
+    BOOL victory = [self.enemyShip isDestroyed];
+    NSString * msg = victory
+                        ? NSLocalizedString(@"You won!", nil)
+                        : NSLocalizedString(@"You lost!", nil);
+
+    [self showInfoAlertWithTitle:NSLocalizedString(@"End of Game", nil)
+                        withText:msg];
+
+    if (victory) {
+        NSInteger bestScore = [GameSupport retrieveBestScore];
+        NSInteger score = [self.playerShip getScore];
+
+        if (score > bestScore) {
+            NSString * fmt = NSLocalizedString(@"New best score! (%ld, previously was %ld)", nil);
+            NSString * text = [NSString stringWithFormat:fmt, (long)score, (long)bestScore];
+
+            [self showInfoAlertWithTitle:NSLocalizedString(@"New Best Score", nil)
+                                withText:text];
+
+            [GameSupport saveBestScore:score];
+        }
+    }
+
+    exit(EXIT_SUCCESS);
 }
 
 -(SKLabelNode *)addLabelNodeWithX:(CGFloat)x withY:(CGFloat)y

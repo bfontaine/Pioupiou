@@ -15,6 +15,7 @@
 		F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40D11AA1A0BB24400970638 /* MainMenu.xib */; };
 		F40D11C31A0BB91000970638 /* PPShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11C21A0BB91000970638 /* PPShip.m */; };
 		F441E0E01A1A366300EF1ECC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F441E0E21A1A366300EF1ECC /* Localizable.strings */; };
+		F441E0EA1A1A546D00EF1ECC /* GameSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F441E0E91A1A546D00EF1ECC /* GameSupport.m */; };
 		F49B70551A14C0DF0076C6FB /* PPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70541A14C0DF0076C6FB /* PPPlayer.m */; };
 		F49B70581A14C0FB0076C6FB /* PPEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70571A14C0FB0076C6FB /* PPEnemy.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,8 @@
 		F441E0E31A1A366400EF1ECC /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F441E0E51A1A375A00EF1ECC /* README-fr.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "README-fr.md"; path = "../README-fr.md"; sourceTree = "<group>"; };
 		F441E0E71A1A4C5600EF1ECC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F441E0E81A1A546D00EF1ECC /* GameSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSupport.h; sourceTree = "<group>"; };
+		F441E0E91A1A546D00EF1ECC /* GameSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSupport.m; sourceTree = "<group>"; };
 		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
 		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
 		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				F49B70541A14C0DF0076C6FB /* PPPlayer.m */,
 				F40D11A31A0BB24400970638 /* GameScene.h */,
 				F40D11A41A0BB24400970638 /* GameScene.m */,
+				F441E0E81A1A546D00EF1ECC /* GameSupport.h */,
+				F441E0E91A1A546D00EF1ECC /* GameSupport.m */,
 				F441E0D61A1A26D900EF1ECC /* Masks.h */,
 				F40D11A61A0BB24400970638 /* GameScene.sks */,
 				F40D11A81A0BB24400970638 /* Images.xcassets */,
@@ -182,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F441E0EA1A1A546D00EF1ECC /* GameSupport.m in Sources */,
 				F40D11A21A0BB24400970638 /* main.m in Sources */,
 				F40D11A51A0BB24400970638 /* GameScene.m in Sources */,
 				F40D11A01A0BB24400970638 /* AppDelegate.m in Sources */,
