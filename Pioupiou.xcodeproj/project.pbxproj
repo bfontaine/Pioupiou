@@ -48,6 +48,7 @@
 		F441E0E11A1A366300EF1ECC /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F441E0E31A1A366400EF1ECC /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F441E0E51A1A375A00EF1ECC /* README-fr.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "README-fr.md"; path = "../README-fr.md"; sourceTree = "<group>"; };
+		F441E0E61A1A4A2000EF1ECC /* Pioupiou.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pioupiou.entitlements; sourceTree = "<group>"; };
 		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
 		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
 		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		F40D119B1A0BB24400970638 /* Pioupiou */ = {
 			isa = PBXGroup;
 			children = (
+				F441E0E61A1A4A2000EF1ECC /* Pioupiou.entitlements */,
 				F441E0E51A1A375A00EF1ECC /* README-fr.md */,
 				F441E0E21A1A366300EF1ECC /* Localizable.strings */,
 				F40D119E1A0BB24400970638 /* AppDelegate.h */,
@@ -171,6 +173,11 @@
 				TargetAttributes = {
 					F40D11981A0BB24400970638 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					F40D11B01A0BB24400970638 = {
 						CreatedOnToolsVersion = 6.1;
@@ -353,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pioupiou/Pioupiou.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pioupiou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -365,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pioupiou/Pioupiou.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pioupiou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
