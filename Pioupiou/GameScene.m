@@ -7,8 +7,11 @@
 //
 
 #import "GameScene.h"
+#import "Masks.h"
 
 #define SCORES_FONT_SIZE 80
+
+#define SCENE_EDGE_BIT_MASK 0x1 << 3
 
 @interface GameScene ()
 
@@ -35,7 +38,6 @@
     SKSpriteNode * playground = [SKSpriteNode spriteNodeWithTexture:bg size:self.size];
     playground.position = CGPointMake(width/2, height/2);
     [playground setSize:self.size];
-
     [self addChild:playground];
 
     // ships
@@ -50,13 +52,14 @@
     // limits
     self.scaleMode = SKSceneScaleModeAspectFill;
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+    self.physicsBody.collisionBitMask = PP_EDGE_BIT_MASK;
 
     [self addChild:self.playerShip.shipNode];
     [self addChild:self.enemyShip.shipNode];
 
-    CGFloat leftX  = SCORES_FONT_SIZE,
-            rightX = self.size.width - SCORES_FONT_SIZE,
-            firstLineY = self.size.height - SCORES_FONT_SIZE,
+    CGFloat leftX       = SCORES_FONT_SIZE,
+            rightX      = self.size.width - SCORES_FONT_SIZE,
+            firstLineY  = self.size.height - SCORES_FONT_SIZE,
             secondLineY = firstLineY - SCORES_FONT_SIZE;
 
     // player
@@ -194,11 +197,8 @@
 {
     for (SKNode * node in self.children) {
         // remove hidden nodes
-        // TODO don't remove ships (only rockets)
-        if (node.position.y < 0 ||
-            node.position.y > self.size.height ||
-            node.position.x < 0 ||
-            node.position.x > self.size.width) {
+        if (node.position.y < 0 || node.position.y > self.size.height ||
+            node.position.x < 0 || node.position.x > self.size.width) {
             [node removeFromParent];
         }
     }
@@ -220,33 +220,28 @@
 
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
-    int bitA = contact.bodyA.contactTestBitMask;
-    int bitB = contact.bodyB.contactTestBitMask;
+    int bitA = contact.bodyA.categoryBitMask;
+    int bitB = contact.bodyB.categoryBitMask;
 
     if (bitA == bitB) { return; }
 
-    // same side
-    if ((bitA & PP_PLAYER_BIT_MASK) == (bitB & PP_PLAYER_BIT_MASK)) {
-        return;
-    }
-
     // remove rockets
 
-    if (bitA & PP_ROCKET_BIT_MASK) {
+    if (bitA & (PP_PLAYER_ROCKET_BIT_MASK|PP_ENEMY_ROCKET_BIT_MASK)) {
         [contact.bodyA.node removeFromParent];
     }
 
-    if (bitB & PP_ROCKET_BIT_MASK) {
+    if (bitB & (PP_PLAYER_ROCKET_BIT_MASK|PP_ENEMY_ROCKET_BIT_MASK)) {
         [contact.bodyB.node removeFromParent];
     }
 
     // destroy ships
 
-    if ((bitA == PP_ENEMY_SHIP_BIT_MASK) || (bitB == PP_ENEMY_SHIP_BIT_MASK)) {
+    if (bitA == PP_ENEMY_SHIP_BIT_MASK || bitB == PP_ENEMY_SHIP_BIT_MASK) {
         [self.enemyShip receiveRocket];
     }
 
-    if ((bitA == PP_PLAYER_SHIP_BIT_MASK) || (bitB == PP_PLAYER_SHIP_BIT_MASK)) {
+    if (bitA == PP_PLAYER_SHIP_BIT_MASK || bitB == PP_PLAYER_SHIP_BIT_MASK) {
         [self.playerShip receiveRocket];
     }
 }

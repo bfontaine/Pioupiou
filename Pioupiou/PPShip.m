@@ -37,9 +37,16 @@
         self.shipNode.scale = 0.5;
 
         self.rocketNode.scale = 0.2;
+
+        self.shipNode.physicsBody = [SKPhysicsBody bodyWithTexture:self.shipNode.texture
+                                                              size:self.shipNode.size];
         self.rocketNode.physicsBody = [SKPhysicsBody bodyWithTexture:self.rocketNode.texture
                                                                 size:self.rocketNode.size];
+        self.shipNode.physicsBody.affectedByGravity = NO;
         self.rocketNode.physicsBody.affectedByGravity = NO;
+
+        self.rocketNode.physicsBody.allowsRotation = NO;
+        self.shipNode.physicsBody.allowsRotation = NO;
 
         self.width = self.shipNode.size.width;
         self.height = self.shipNode.size.height;
@@ -51,16 +58,6 @@
 
         self.health = PP_MAX_HEALTH;
         self.lives = PP_LIVES_COUNT;
-
-        self.shipNode.physicsBody = [SKPhysicsBody bodyWithTexture:self.shipNode.texture
-                                                              size:self.shipNode.size];
-        self.shipNode.physicsBody.affectedByGravity = NO;
-
-//        self.shipNode.physicsBody.categoryBitMask = PP_SHIP_BIT_MASK;
-//        self.shipNode.physicsBody.collisionBitMask = PP_ROCKET_BIT_MASK;
-//
-//        self.shipNode.physicsBody.categoryBitMask = PP_ROCKET_BIT_MASK;
-//        self.shipNode.physicsBody.collisionBitMask = PP_SHIP_BIT_MASK;
     }
     return self;
 }

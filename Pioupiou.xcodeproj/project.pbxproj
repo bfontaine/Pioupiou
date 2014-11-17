@@ -45,6 +45,7 @@
 		F40D11B71A0BB24400970638 /* PioupiouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PioupiouTests.m; sourceTree = "<group>"; };
 		F40D11C11A0BB91000970638 /* PPShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPShip.h; sourceTree = "<group>"; };
 		F40D11C21A0BB91000970638 /* PPShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPShip.m; sourceTree = "<group>"; };
+		F441E0D61A1A26D900EF1ECC /* Masks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masks.h; sourceTree = "<group>"; };
 		F49B70531A14C0DF0076C6FB /* PPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlayer.h; sourceTree = "<group>"; };
 		F49B70541A14C0DF0076C6FB /* PPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayer.m; sourceTree = "<group>"; };
 		F49B70561A14C0FB0076C6FB /* PPEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEnemy.h; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 				F49B70541A14C0DF0076C6FB /* PPPlayer.m */,
 				F40D11A31A0BB24400970638 /* GameScene.h */,
 				F40D11A41A0BB24400970638 /* GameScene.m */,
+				F441E0D61A1A26D900EF1ECC /* Masks.h */,
 				F40D11A61A0BB24400970638 /* GameScene.sks */,
 				F40D11A81A0BB24400970638 /* Images.xcassets */,
 				F40D11AA1A0BB24400970638 /* MainMenu.xib */,

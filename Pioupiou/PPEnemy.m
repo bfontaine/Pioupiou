@@ -7,6 +7,7 @@
 //
 
 #import "PPEnemy.h"
+#import "Masks.h"
 
 @implementation PPEnemy
 
@@ -16,8 +17,14 @@
                 withRocketImageNamed:@"EnemyRocket"];
 
     if (self != nil) {
-        self.shipNode.physicsBody.contactTestBitMask = PP_ENEMY_SHIP_BIT_MASK;
-        self.rocketNode.physicsBody.contactTestBitMask = PP_ENEMY_ROCKET_BIT_MASK;
+        self.shipNode.physicsBody.categoryBitMask = PP_ENEMY_SHIP_BIT_MASK;
+        self.rocketNode.physicsBody.categoryBitMask = PP_ENEMY_ROCKET_BIT_MASK;
+
+        self.shipNode.physicsBody.contactTestBitMask = PP_PLAYER_ROCKET_BIT_MASK;
+        self.rocketNode.physicsBody.contactTestBitMask = PP_PLAYER_SHIP_BIT_MASK;
+
+        self.rocketNode.physicsBody.collisionBitMask = PP_EDGE_BIT_MASK;
+
         self.rocketDirection = -1;
     }
 

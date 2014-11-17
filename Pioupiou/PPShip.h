@@ -10,16 +10,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 /**
- *  Bit mask of a ship
- */
-#define PP_SHIP_BIT_MASK 2
-
-/**
- *  Bit mask of a rocket
- */
-#define PP_ROCKET_BIT_MASK 1
-
-/**
  *  Offset used for the rocket animation
  */
 #define PP_ROCKET_OFFSET 10000
