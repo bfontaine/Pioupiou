@@ -36,9 +36,9 @@
         self.shipNode = [SKSpriteNode spriteNodeWithImageNamed:shipImageName];
         self.rocketNode = [SKSpriteNode spriteNodeWithImageNamed:rocketImageName];
 
-        self.shipNode.scale = 0.5;
+        self.shipNode.scale = 0.3;
 
-        self.rocketNode.scale = 0.2;
+        self.rocketNode.scale = 0.1;
 
         self.shipNode.physicsBody = [SKPhysicsBody bodyWithTexture:self.shipNode.texture
                                                               size:self.shipNode.size];

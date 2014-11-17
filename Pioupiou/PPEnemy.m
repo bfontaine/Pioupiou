@@ -43,9 +43,11 @@
 -(BOOL)isMovingUp { return self.nextDirectionY > 0; }
 -(BOOL)isMovingDown { return self.nextDirectionY < 0; }
 
--(void)update
+-(void)updateWithPlayerShipPosition:(CGPoint)position
 {
     int rand = arc4random_uniform(100);
+
+    CGFloat yOffset = self.y - position.y; // >0 = I’m above, <0 I’m below
 
     // start/stop firing
 
@@ -64,7 +66,7 @@
             [self resetVerticalMovement];
         }
     } else {
-        if (rand < 50) {
+        if (rand < 50 || (rand > 90 && yOffset < 0)) {
             [self prepareToMoveUp];
         } else {
             [self prepareToMoveDown];

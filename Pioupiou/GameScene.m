@@ -222,7 +222,7 @@
     }
 
     // move the enemy
-    [self.enemyShip update];
+    [self.enemyShip updateWithPlayerShipPosition:self.playerShip.shipNode.position];
 }
 
 

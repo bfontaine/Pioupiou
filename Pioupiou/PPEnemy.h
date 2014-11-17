@@ -12,8 +12,11 @@
 @interface PPEnemy : PPShip
 
 /**
- *  Automatically update the enemy’s movements and firing mode.
+ *  Automatically update the enemy’s movements and firing mode, given the
+ *  player’s ship position.
+ *
+ *  @param position the player’s ship position
  */
--(void)update;
+-(void)updateWithPlayerShipPosition:(CGPoint)position;
 
 @end

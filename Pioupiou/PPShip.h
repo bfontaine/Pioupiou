@@ -34,7 +34,7 @@
 /**
  *  Unit increment for movements
  */
-#define PP_MOVE_INCR 5
+#define PP_MOVE_INCR 6
 
 /**
  *  A move direction
