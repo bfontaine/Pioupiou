@@ -13,7 +13,6 @@
 		F40D11A71A0BB24400970638 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F40D11A61A0BB24400970638 /* GameScene.sks */; };
 		F40D11A91A0BB24400970638 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40D11A81A0BB24400970638 /* Images.xcassets */; };
 		F40D11AC1A0BB24400970638 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40D11AA1A0BB24400970638 /* MainMenu.xib */; };
-		F40D11B81A0BB24400970638 /* PioupiouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11B71A0BB24400970638 /* PioupiouTests.m */; };
 		F40D11C31A0BB91000970638 /* PPShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D11C21A0BB91000970638 /* PPShip.m */; };
 		F441E0E01A1A366300EF1ECC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F441E0E21A1A366300EF1ECC /* Localizable.strings */; };
 		F49B70551A14C0DF0076C6FB /* PPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F49B70541A14C0DF0076C6FB /* PPPlayer.m */; };
@@ -42,8 +41,6 @@
 		F40D11A81A0BB24400970638 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F40D11AB1A0BB24400970638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F40D11B11A0BB24400970638 /* PioupiouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioupiouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40D11B61A0BB24400970638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F40D11B71A0BB24400970638 /* PioupiouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PioupiouTests.m; sourceTree = "<group>"; };
 		F40D11C11A0BB91000970638 /* PPShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPShip.h; sourceTree = "<group>"; };
 		F40D11C21A0BB91000970638 /* PPShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPShip.m; sourceTree = "<group>"; };
 		F441E0D61A1A26D900EF1ECC /* Masks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masks.h; sourceTree = "<group>"; };
@@ -79,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				F40D119B1A0BB24400970638 /* Pioupiou */,
-				F40D11B41A0BB24400970638 /* PioupiouTests */,
 				F40D119A1A0BB24400970638 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,23 +118,6 @@
 			children = (
 				F40D119D1A0BB24400970638 /* Info.plist */,
 				F40D11A11A0BB24400970638 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F40D11B41A0BB24400970638 /* PioupiouTests */ = {
-			isa = PBXGroup;
-			children = (
-				F40D11B71A0BB24400970638 /* PioupiouTests.m */,
-				F40D11B51A0BB24400970638 /* Supporting Files */,
-			);
-			path = PioupiouTests;
-			sourceTree = "<group>";
-		};
-		F40D11B51A0BB24400970638 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F40D11B61A0BB24400970638 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40D11B81A0BB24400970638 /* PioupiouTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
